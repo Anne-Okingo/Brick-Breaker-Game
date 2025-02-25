@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#game-container {
+    position: relative;
+}
+
+#game-screen {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    border: 1px solid black;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+#ball {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: red;
+    border-radius: 50%;
+    background-image: url('assets/images/ball.png');
+    background-size: cover;
+}
+
+#paddle {
+    position: absolute;
+    width: 150px;
+    height: 20px;
+    background-color: #0ff;
+}
+
+.brick {
+    position: absolute;
+    width: 80px;
+    height: 24px;
+    background-image: url('assets/images/brick.png');
+    background-size: cover;
+}
+
+#message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    z-index: 10;
+}
+
+#message.paused {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+}
+
+#message.menu, #message.gameover {
+    background-color: rgba(0, 0, 0, 1);
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+}
+
+#lives-counter {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
